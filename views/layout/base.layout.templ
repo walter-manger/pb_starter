@@ -1,0 +1,28 @@
+package layout
+
+templ Base(title) {
+	<!DOCTYPE html>
+	<html lang="en" data-theme="dark">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<meta
+ 				name="description"
+ 				content="Go/Echo+Templ+Htmx: Full stack application using Golang's Echo framework & Templ templating language with user session management + CRUD to a SQLite database (To Do List) and HTMX in the frontend"
+			/>
+			<meta name="google" content="notranslate"/>
+			<script src="/public/styles/base.css"></script>
+			<link rel="stylesheet" href="/public/styles/base.min.css"/>
+			<title>Awesome { title }</title>
+			<script src="/public/js/htmx.min.js"></script>
+		</head>
+		<body class="sample-transition" hx-boost="true">
+			<header>
+				<h2>Hello</h2>
+			</header>
+			<main class="">
+                <h3>Here is the main content</h3>
+			</main>
+		</body>
+	</html>
+}
