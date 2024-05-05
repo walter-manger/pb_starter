@@ -1,9 +1,8 @@
 package handlers
 
 import (
-	"github.com/walter-manger/pb_starter/views/root"
-
 	"github.com/labstack/echo/v5"
+	"github.com/walter-manger/pb_starter/views/root"
 )
 
 var (
