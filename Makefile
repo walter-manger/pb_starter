@@ -5,10 +5,10 @@ dev:
 	npx nodemon --signal SIGTERM -e "templ go" -x "templ generate && go run main.go serve" -i "**/*_templ.go"
 
 watch-css:
-	./bin/tailwindcss -i ./src/styles/base.input.css -o ./public/styles/base.css --watch
+	./bin/tailwindcss -i ./src/styles/base.input.css -o ./public/styles/base.min.css --watch
 
 generate-css:
-	./bin/tailwindcss -i ./src/styles/base.input.css -o ./public/styles/base.css --minify
+	./bin/tailwindcss -i ./src/styles/base.input.css -o ./public/styles/base.min.css --minify
 
 generate:
 	templ generate

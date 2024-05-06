@@ -19,8 +19,10 @@ func main() {
 		e.Router.Static("/favicon.ico", "public/images/favicon/favicon.ico")
 
 		e.Router.GET("/report", func(c echo.Context) error {
-			return c.String(http.StatusOK, "Hello world!")
+			return c.String(http.StatusOK, "Hello world! & More & Update")
 		}, apis.ActivityLogger(app))
+
+		e.Router.GET("/", handlers.HomeHandler, apis.ActivityLogger(app))
 
 		return nil
 	})

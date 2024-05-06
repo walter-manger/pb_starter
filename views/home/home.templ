@@ -12,7 +12,8 @@ templ Home() {
 }
 
 templ HomeIndex(
-    title,
+    title string,
+    cmp templ.Component,
     ) {
 	@layout.Base(title) {
 		@cmp

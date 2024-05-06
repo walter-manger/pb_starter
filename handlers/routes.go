@@ -1,8 +1,9 @@
 package handlers
 
 import (
+	"github.com/a-h/templ"
 	"github.com/labstack/echo/v5"
-	"github.com/walter-manger/pb_starter/views/root"
+	"github.com/walter-manger/pb_starter/views/home"
 )
 
 var (
@@ -11,12 +12,14 @@ var (
 )
 
 func SetupRoutes(e *echo.Echo) {
-	e.GET("/", homeHandler)
+	e.GET("/", HomeHandler)
 }
 
-func homeHandler(c echo.Context) error {
-	return renderView(c, root.HomeIndex(
+func HomeHandler(c echo.Context) error {
+	homeView := home.Home()
+	return renderView(c, home.HomeIndex(
 		"| Home",
+		homeView,
 	))
 }
 

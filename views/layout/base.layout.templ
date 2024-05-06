@@ -1,6 +1,6 @@
 package layout
 
-templ Base(title) {
+templ Base(title string) {
 	<!DOCTYPE html>
 	<html lang="en" data-theme="dark">
 		<head>
@@ -13,7 +13,7 @@ templ Base(title) {
 			<meta name="google" content="notranslate"/>
 			<script src="/public/styles/base.css"></script>
 			<link rel="stylesheet" href="/public/styles/base.min.css"/>
-			<title>Awesome { title }</title>
+			<title>Awesome { title } Update -- yes?</title>
 			<script src="/public/js/htmx.min.js"></script>
 		</head>
 		<body class="sample-transition" hx-boost="true">
@@ -22,6 +22,7 @@ templ Base(title) {
 			</header>
 			<main class="">
                 <h3>Here is the main content</h3>
+                { children... }
 			</main>
 		</body>
 	</html>
